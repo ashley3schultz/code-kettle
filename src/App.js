@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './componants/Header';
 import About from './componants/About';
+import Blog from './componants/About';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
         <header className="App-header">
           <Header/>
           <About/>
+          <Blog/>
         </header>
       </div>
     );
