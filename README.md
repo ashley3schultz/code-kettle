@@ -1,15 +1,6 @@
 
-# flatten-Array
-**A simple app to flatten arrays**
+# Portfolio Website for Ashley Schultz
 
-## Installing
-From the command line
-  ```
-  git clone 'git@github.com:ashley3schultz/flatten-array.git'
-  ```
-  ```
-  npm install
-  ```
-  ```
-  npm start
-  ```
+About
+Projects
+blog
