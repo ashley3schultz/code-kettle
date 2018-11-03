@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom"
 
-const Navbar = props => {
-      return (
+const Navbar = () => {
+    return (
         <div className="navbar">
             <NavLink to='/'>About</NavLink>
             <NavLink to='/projects'>Projects</NavLink>

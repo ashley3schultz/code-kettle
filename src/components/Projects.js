@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Blog = props => {
+const Projects = props => {
       return (
         <div className='projects'>
-            <h3>Project Name</h3>
+            <h3>List of Projects</h3>
             {/* <img 
                 src={require('./images/Logo.')} 
                 alt='logo'
@@ -12,4 +12,4 @@ const Blog = props => {
     )
 }
 
-export default Blog
+export default Projects
