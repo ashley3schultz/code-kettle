@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Blog from './components/Blog';
+import Blog from '../components/Blog';
 
 class BlogContainer extends Component {
 
@@ -29,9 +29,10 @@ class BlogContainer extends Component {
     
     return (
         <div className="BlogsContainer">
-        <Blogs/>
+        Blog
+        <Blog/>
         </div>
-    );
+    )
   }
 }
 
