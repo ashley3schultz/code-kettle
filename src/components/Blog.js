@@ -8,6 +8,7 @@ const Blog = props => {
                     <h2>{blog.title}</h2>
                     <h3>{blog.date}</h3>
                     <p>{blog.body.substring(0,100)}</p>
+                    <a href={blog.url}>Read Blog</a>
                 </div>
             )}
         </div>
