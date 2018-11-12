@@ -7,13 +7,16 @@ class BlogContainer extends Component {
     blogs: [
       {title: "sample title", 
         body: "sample body with long txt",
-        date: "10/28/2018"},
+        date: "10/28/2018",
+        url: ""},
       {title: "2 sample title", 
         body: "2 sample body with long txt",
-        date: "10/29/2018"},
+        date: "10/29/2018",
+        url: ""},
       {title: "3 sample title", 
         body: "3 sample body with long txt",
-        date: "10/30/2018"}
+        date: "10/30/2018",
+        url: ""}
     ]
   }
 
