@@ -30,7 +30,7 @@ class BlogContainer extends Component {
     return (
         <div className="BlogsContainer">
         Blog
-        <Blog/>
+        <Blog blogs={this.state.blogs}/>
         </div>
     )
   }
