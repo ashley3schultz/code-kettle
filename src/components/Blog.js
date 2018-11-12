@@ -2,12 +2,14 @@ import React from 'react';
 
 const Blog = props => {
       return (
-        <div className='projects'>
-            <h3>List of Blogs</h3>
-            {/* <img 
-                src={require('./images/Logo.')} 
-                alt='logo'
-            /> */}
+        <div className='bloglist'>
+            {props.blogs.map(blog => 
+                <div key={blog.title} className="blog">
+                    <h2>{blog.title}</h2>
+                    <h3>{blog.date}</h3>
+                    <p>{blog.body.substring(0,100)}</p>
+                </div>
+            )}
         </div>
     )
 }
