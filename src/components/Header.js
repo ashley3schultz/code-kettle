@@ -7,7 +7,7 @@ const Header = props => {
             src={require('./images/Logo.')} 
             alt='logo'
         /> */}
-        <h1>CodeKettle</h1>
+        <h1>Code-Kettle</h1>
         </div>
     )
 }
