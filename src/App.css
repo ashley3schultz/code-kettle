@@ -1,9 +1,25 @@
 .App {
-  background-image: url('./components/images/desk1.jpg');
+  background-image: url('./components/images/CK.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+}
+
+.about {
+  margin-top: 550px;
+}
+
+.profile-pic {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 25%;
+  float: left;
+}
+
+.about-p {
+  font-size: 1.25em;
+  text-align: left;
 }
 
 .App-logo {
