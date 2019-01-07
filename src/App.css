@@ -6,23 +6,15 @@
   text-align: center;
 }
 
-.about {
-  width: 900px;
-  align-content: center;
-  margin-top: 0px;
-}
-
-.profile-pic {
-  padding-left: 20px;
-  padding-right: 20px;
+.about img {
+  border-radius: 50%;
   width: 25%;
-  float: left;
 }
 
 .about-p {
   font-size: 1.15em;
   text-align: left;
-  padding-bottom: 500px;
+  padding: 25px;
 }
 
 .App-logo {
