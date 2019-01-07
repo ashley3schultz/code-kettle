@@ -32,8 +32,7 @@ class BlogContainer extends Component {
     
     return (
         <div className="BlogsContainer">
-        Blog
-        <Blog blogs={this.state.blogs}/>
+          <Blog blogs={this.state.blogs}/>
         </div>
     )
   }
