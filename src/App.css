@@ -1,9 +1,27 @@
 .App {
-  background-image: url('./components/images/CK.png');
+  /* background-image: url('./components/images/CK.png'); */
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white; 
+}
+
+a:link {
+  text-decoration: none;
+  color: white; 
+}
+
+.navbar a {
+  font-size: 1.5em;
+  background-color: #2b383b;
+  padding: 0px;
+  margin: 0px;
+  color: white;
 }
 
 .about img {
@@ -17,20 +35,10 @@
   padding: 25px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+  font-size: 2.5em;
+  padding: 0px;
+  margin: 0px;
 }
 
 .App-link {
