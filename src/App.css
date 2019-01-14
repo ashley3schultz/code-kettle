@@ -16,12 +16,16 @@ a:link {
   color: white; 
 }
 
-.navbar a {
+.navbar {
+  width: 100%;
   font-size: 1.5em;
   background-color: #2b383b;
   padding: 0px;
   margin: 0px;
   color: white;
+}
+.navbar a {
+  padding: 50px;
 }
 
 .about img {
@@ -43,6 +47,22 @@ a:link {
 
 .App-link {
   color: #61dafb;
+}
+
+.projects {
+  width: 100%;
+}
+
+a.proj-link {
+  color: black;
+}
+
+.project {
+  width: 30%;
+  height: 30%;
+  border: 1px solid gray;
+  display: inline-block;
+  margin: 1%;
 }
 
 @keyframes App-logo-spin {
