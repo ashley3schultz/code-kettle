@@ -1,6 +1,6 @@
 export const projects = [
 
-    {title: "Tea-Connoissuer", 
+    {title: "Tea-Connoisseur", 
       info: "An application for tea connoisseur to add teas to the main collection and post their tasting notes.",
       url: "https://tea-connoisseur.herokuapp.com/"},
 
