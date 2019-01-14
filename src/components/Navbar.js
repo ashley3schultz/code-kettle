@@ -4,9 +4,13 @@ import { NavLink } from "react-router-dom"
 const Navbar = () => {
     return (
         <div className="navbar">
-            <NavLink to='/'> About </NavLink>
-            <NavLink to='/projects'> Projects </NavLink>
-            <NavLink to='/blog'> Blog </NavLink>
+            <NavLink to='/'>About</NavLink>
+            <NavLink to='/projects'>Projects</NavLink>
+            <a href='http://codetoatea.com/' 
+            target="_blank" 
+            rel="noopener noreferrer">
+                Blog
+            </a>
         </div>
     )
 }
