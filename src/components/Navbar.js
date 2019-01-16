@@ -6,11 +6,7 @@ const Navbar = () => {
         <div className="navbar">
             <NavLink to='/'>About</NavLink>
             <NavLink to='/projects'>Projects</NavLink>
-            <a href='http://codetoatea.com/' 
-            target="_blank" 
-            rel="noopener noreferrer">
-                Blog
-            </a>
+            <NavLink to='/blogs'>Blog</NavLink>
         </div>
     )
 }
