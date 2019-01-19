@@ -6,7 +6,7 @@ const Projects = props => {
         <div className='projects'>
             {projects.map(proj => {
                 return (
-                    <div className="project">
+                    <div key={proj.title} className="project">
                         <h2>{proj.title}</h2>
                         <img src={require(`./images/${proj.title}.PNG`)} alt='pic'/>
                         <p>{proj.info}</p>
