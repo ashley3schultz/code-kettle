@@ -4,10 +4,9 @@ const Blog = props => {
       return (
         <div className='bloglist'>
             {props.blogs.map(blog => 
-                <div key={blog.title} className="blog">
-                    <h2>{blog.title}</h2>
-                    <h3>{blog.date}</h3>
-                    <p>{blog.body.substring(0,100)}</p>
+                <div key={blog.name} className="blog">
+                    <h2>{blog.name}</h2>
+                    <h3>Date</h3>
                     <a href={blog.url}>Read Blog</a>
                 </div>
             )}
