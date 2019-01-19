@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Blog from '../components/Blog';
 import { connect } from 'react-redux'
-import { bindActionCreators } from "redux";
-import * as actions from "../actions/portfolio";
+import {fetchBlogs} from "../actions/portfolio";
 
 class BlogContainer extends Component {
 
   componentDidMount() {
-    this.props.actions.fetchBlogs()
+    this.props.fetchBlogs()
   }
 
   render() {
@@ -22,12 +21,13 @@ class BlogContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    blogs: state
+    blogs: state.blogs,
+    blog: state.blog
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return { actions: bindActionCreators(actions, dispatch) };
-};
+// const mapDispatchToProps = dispatch => {
+//   return { actions: bindActionCreators(actions, dispatch) };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BlogContainer)
+export default connect(mapStateToProps, {fetchBlogs})(BlogContainer)
