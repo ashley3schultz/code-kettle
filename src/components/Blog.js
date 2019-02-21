@@ -18,4 +18,4 @@ const Blog = props => {
     )
 }
 
-export default Blo
+export default Blog
