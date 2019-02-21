@@ -6,14 +6,16 @@ import {fetchBlogs, fetchBlog} from "../actions/portfolio";
 class BlogContainer extends Component {
 
   componentDidMount() {
+    console.log("hit CDM")
     this.props.fetchBlogs()
-    this.getBlogContents()
+    // this.getBlogContents()
 
   }
 
   getBlogContents = () => {
+    console.log("hit get Blog")
     const name = '2018-04-13-where_the_journey_begins.markdown'
-    this.props.fetchBlogs(name)
+    this.props.fetchBlog(name)
   }
 
   render() {
