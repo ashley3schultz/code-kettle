@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import Blog from '../components/Blog';
+import BlogList from '../components/BlogList';
 import { connect } from 'react-redux'
 import {fetchBlogs, fetchBlog} from "../actions/portfolio";
 
 class BlogContainer extends Component {
 
   componentDidMount() {
-    console.log("hit CDM")
     this.props.fetchBlogs()
-    // this.getBlogContents()
+    this.getBlogContents()
 
   }
 
   getBlogContents = () => {
-    console.log("hit get Blog")
     const name = '2018-04-13-where_the_journey_begins.markdown'
     this.props.fetchBlog(name)
   }
@@ -22,7 +20,7 @@ class BlogContainer extends Component {
     
     return (
         <div className="BlogsContainer">
-          <Blog blogs={this.props.blogs} blog={this.props.blog}/>
+          <BlogList blogs={this.props.blogs} blog={this.props.blog}/>
         </div>
     )
   }
