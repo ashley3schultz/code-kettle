@@ -11,12 +11,12 @@ export const fetchBlogs = () => {
 }
 
 export const updateBlogs = (blogs) => {
-    return { type: "UPDATE_BLOGS", blogs: blogs }
+    return { type: "UPDATE_BLOGS", blogs: blogs.reverse() }
 }
 
 export const fetchBlog = (name) => {
     return dispatch => {
-        return fetch(API_URL + name + TOKEN)
+        return fetch(API_URL + name)
         .then(response => response.json())
         .then(blog => dispatch(updateBlog(blog)))
         .catch(error => console.log(error));
