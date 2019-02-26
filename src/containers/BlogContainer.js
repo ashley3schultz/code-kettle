@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BlogList from '../components/BlogList';
+import Blog from '../components/Blog';
 import { connect } from 'react-redux'
 import {fetchBlogs, fetchBlog} from "../actions/portfolio";
 
@@ -7,20 +8,25 @@ class BlogContainer extends Component {
 
   componentDidMount() {
     this.props.fetchBlogs()
-    this.getBlogContents()
-
   }
 
-  getBlogContents = () => {
-    const name = '2018-04-13-where_the_journey_begins.markdown'
-    this.props.fetchBlog(name)
+  handleLinkClick = (event) => {
+    const name = event.target.getAttribute('href').replace('/blog/', '')
+    this.props.fetchBlog(name + '.markdown')
   }
 
   render() {
-    
     return (
         <div className="BlogsContainer">
-          <BlogList blogs={this.props.blogs} blog={this.props.blog}/>
+          {window.location.pathname === "/blog" ?
+            <BlogList 
+            blogs={this.props.blogs} 
+            handleLinkClick={this.handleLinkClick}
+            /> : 
+            <Blog
+              blog={this.props.blog} 
+            />
+          }
         </div>
     )
   }
