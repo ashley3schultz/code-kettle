@@ -24,5 +24,5 @@ export const fetchBlog = (name) => {
 }
 
 export const updateBlog = (blog) => {
-    return { type: "UPDATE_BLOG", blog: blog}
+    return { type: "UPDATE_BLOG", blog: window.atob(blog.content) }
 }
