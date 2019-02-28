@@ -1,6 +1,18 @@
 const API_URL = process.env.REACT_APP_BLOG_API
 const TOKEN = process.env.REACT_APP_TOKEN
 
+const title = (data) => (
+    data.substr(11).replace(/(.markdown)|_/gi," ").replace(/^(.)|\s(.)/gi, ($1) => $1.toUpperCase())
+)
+
+const date = (data) => (
+    new Date(data.substr(0,10)).toString().substr(4,11)
+)
+
+const content = (data) => (
+    data.replace(/(â)|(â)|(â)/gi,"'").split('---')[2]
+)
+
 export const fetchBlogs = () => {
     return dispatch => {
         return fetch(API_URL + TOKEN)
@@ -11,7 +23,16 @@ export const fetchBlogs = () => {
 }
 
 export const updateBlogs = (blogs) => {
-    return { type: "UPDATE_BLOGS", blogs: blogs.reverse() }
+    const list = []
+    blogs.map((blog) => {
+        const item = {
+            title: title(blog.name), 
+            date: date(blog.name),
+            path: '/blog/' + blog.name.replace('.markdown','')
+        }
+        return (list.push(item))
+    })
+    return { type: "UPDATE_BLOGS", blogs: list.reverse() }
 }
 
 export const fetchBlog = (name) => {
@@ -23,6 +44,11 @@ export const fetchBlog = (name) => {
     }
 }
 
-export const updateBlog = (blog) => {
-    return { type: "UPDATE_BLOG", blog: window.atob(blog.content) }
+export const updateBlog = (data) => {
+    const blog = {
+        title: title(data.name),
+        date: date(data.name),
+        content: content(window.atob(data.content))
+    }
+    return { type: "UPDATE_BLOG", blog: blog }
 }
