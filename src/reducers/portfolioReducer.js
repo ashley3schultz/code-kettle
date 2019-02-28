@@ -1,7 +1,7 @@
 export default function portfolioReducer(
     state = {
         blogs: [],
-        blog: {output: ''}
+        blog: {}
     }, action) {
     switch (action.type) {
 
@@ -9,7 +9,7 @@ export default function portfolioReducer(
             return {...state, blogs: action.blogs}
 
         case "UPDATE_BLOG":
-            return {...state, blog: {output: `${action.blog}`}}
+            return {...state, blog: action.blog }
             
         default:
             return state;
