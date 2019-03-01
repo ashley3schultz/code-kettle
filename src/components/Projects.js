@@ -7,11 +7,13 @@ const Projects = props => {
             {projects.map(proj => {
                 return (
                     <div key={proj.title} className="project">
-                        <h2>{proj.title}</h2>
-                        <img src={require(`./images/${proj.title}.PNG`)} alt='pic'/>
-                        <p>{proj.info}</p>
-                        <a className="proj-link" href={proj.url} target="_blank" rel="noopener noreferrer">
-                        View Project</a>
+                        <a href={proj.url}>
+                        <img href={proj.url} src={require(`./images/${proj.title}.PNG`)} alt='pic'/>
+                        <div className="overlay">
+                            <h2>{proj.title}</h2>
+                            <p>{proj.info}</p>
+                        </div>
+                        </a>
                     </div>
                 )
             })}
