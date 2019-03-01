@@ -6,14 +6,8 @@
   text-align: center;
 }
 
-a:visited {
-  text-decoration: none;
-  color: white; 
-}
-
-a:link {
-  text-decoration: none;
-  color: white; 
+.header img{
+  width: 100%;
 }
 
 .navbar {
@@ -29,19 +23,20 @@ a:link {
   padding: 50px;
 }
 
+a:visited {
+  text-decoration: none;
+  color: white; 
+}
+
+a:link {
+  text-decoration: none;
+  color: white; 
+}
+
 .about img {
-  border-radius: 50%;
+  border-radius: 0% 0% 0% 50%;
   width: 25%;
-}
-
-.about-p {
-  font-size: 1.15em;
-  text-align: left;
-  padding: 25px;
-}
-
-.header img{
-  width: 100%;
+  float: right;
 }
 
 .App-link {
@@ -52,8 +47,53 @@ a:link {
   width: 100%;
 }
 
-a.proj-link {
-  color: black;
+.project {
+  padding: 10px;
+  width: 80%;
+  height: 30%;
+  border: #ccc solid 2px;
+  display: inline-block;
+  margin: 5%;
+  position: relative;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project div.overlay {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  opacity: 0;
+  background: rgb(55, 50, 55);
+  z-index: 1;
+  color: white;
+  font-size: .5em;;
+  font-weight: 200;
+  font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+}
+
+.project div.overlay:hover, h2.blog-title a:hover {
+  font-size: 1.5em;;
+  font-weight: 100;
+  opacity: .9;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+}
+
+.about h3 {
+  float: left;
+  margin: 25px;
+  width: 69%;
+  font-size: 400%;
+  font-weight: 200;
+  color: gray;
+  line-height: 1em;
+  font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
 }
 
 h2.blog-title, h2.blog-title a {
@@ -75,7 +115,7 @@ p.blog-date {
   font-family: FreeMono, monospace;
 }
 
-div.blog-content {
+div.blog-content, .about-p {
   font-size: 1.15em;
   text-align: left;
   padding: 25px;
@@ -86,18 +126,6 @@ div.blog-content {
 code {
   font-family: FreeMono, monospace;
   color: #555;
-}
-
-.project {
-  width: 30%;
-  height: 30%;
-  border: 1px solid gray;
-  display: inline-block;
-  margin: 1%;
-}
-
-.project img {
-  width: 100%;
 }
 
 @keyframes App-logo-spin {
