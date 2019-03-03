@@ -10,7 +10,7 @@ const date = (data) => (
 )
 
 const content = (data) => (
-    data.replace(/(â)|(â)|(â)/gi,"'").split('---')[2]
+    data.replace(/(â)|(â)|(â)/gi,"'").replace('---','').replace('---','&&&&&').split('&&&&&')[1]
 )
 
 export const fetchBlogs = () => {
@@ -50,5 +50,6 @@ export const updateBlog = (data) => {
         date: date(data.name),
         content: content(window.atob(data.content))
     }
+    console.log(blog)
     return { type: "UPDATE_BLOG", blog: blog }
 }
