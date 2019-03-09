@@ -3,7 +3,6 @@ import React from 'react';
 const About = props => {
       return (
         <div className='about'>
-            <h3>Ashley Schultz</h3>
             <img className='profile-pic'
                 src={require('./images/profilepic.jpeg')} 
                 alt='profile'
