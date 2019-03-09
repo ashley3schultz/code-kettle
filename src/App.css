@@ -104,22 +104,27 @@
   font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
 }
 
-.navbar a.active {
+.navbar a.active:visited {
   color: gray;
+}
+
+.navbar a:visited {
+  text-decoration: none;
+  color: white; 
+}
+
+.navbar a:link {
+  text-decoration: none;
 }
 
 a:visited {
   text-decoration: none;
-  color: white; 
+  color: rgb(59, 143, 169);
 }
 
 a:link {
   text-decoration: none;
-  color: white; 
-}
-
-.App-link {
-  color: #61dafb;
+  color: rgb(59, 143, 169);
 }
 
 .projects {
