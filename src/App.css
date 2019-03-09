@@ -28,6 +28,21 @@
     margin: auto;
   }
 
+  h2.blog-title, h2.blog-title a {
+    text-align: center;
+    font-weight: 200;
+    color: gray;
+    line-height: 1em;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+
+  .project div.overlay {
+    color: rgb(59, 42, 59);
+    font-size: .75em;;
+    font-weight: 200;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -51,6 +66,38 @@
     border-radius: 0% 0% 0% 50%;
     width: 25%;
     float: right;
+  }
+
+  h2.blog-title, h2.blog-title a {
+    text-align: center;
+    font-weight: 200;
+    color: gray;
+    line-height: 2em;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+
+  .project div.overlay {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    opacity: 0;
+    background: rgb(39, 32, 39);
+    z-index: 1;
+    color: white;
+    font-size: .5em;;
+    font-weight: 200;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+  
+  .project div.overlay:hover, h2.blog-title a:hover {
+    line-height: 1em;
+    font-size: 1.25em;;
+    font-weight: 100;
+    opacity: .9;
+    transition-duration: .5s;
+    transition-timing-function: ease;
   }
 
 }
@@ -112,38 +159,6 @@ a:link {
 
 .project img {
   width: 100%;
-}
-
-.project div.overlay {
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  height: 100%;
-  opacity: 0;
-  background: rgb(55, 50, 55);
-  z-index: 1;
-  color: white;
-  font-size: .5em;;
-  font-weight: 200;
-  font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
-}
-
-.project div.overlay:hover, h2.blog-title a:hover {
-  line-height: 1em;
-  font-size: 1.25em;;
-  font-weight: 100;
-  opacity: .9;
-  transition-duration: .5s;
-  transition-timing-function: ease;
-}
-
-h2.blog-title, h2.blog-title a {
-  text-align: center;
-  font-weight: 200;
-  color: gray;
-  line-height: 2em;
-  font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
 }
 
 p.blog-date {
