@@ -1,3 +1,60 @@
+@media screen and (min-width: 1000px) {
+  .App { 
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .navbar a { 
+    font-size: .75em;
+    padding: 20px;
+    margin: 0px;
+  }
+
+  .about h3 {
+    margin: 2.5%;
+    font-size: 200%;
+    font-weight: 200;
+    color: gray;
+    line-height: 1.25em;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+
+  .about img {
+    width: 90%;
+    padding: 0px;
+    margin: auto;
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  
+  .navbar a { 
+    padding: 50px;
+  }
+
+  .about h3 {
+    float: left;
+    margin: 2.5%;
+    width: 70%;
+    font-size: 400%;
+    font-weight: 200;
+    color: gray;
+    line-height: 1em;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+
+  .about img {
+    border-radius: 0% 0% 0% 50%;
+    width: 25%;
+    float: right;
+  }
+
+}
+
 .App {
   /* background-image: url('./components/images/CK.png'); */
   background-position: top;
@@ -19,8 +76,9 @@
   color: white;
   font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
 }
-.navbar a {
-  padding: 50px;
+
+.navbar a.active {
+  color: gray;
 }
 
 a:visited {
@@ -31,12 +89,6 @@ a:visited {
 a:link {
   text-decoration: none;
   color: white; 
-}
-
-.about img {
-  border-radius: 0% 0% 0% 50%;
-  width: 25%;
-  float: right;
 }
 
 .App-link {
@@ -86,17 +138,6 @@ a:link {
   transition-timing-function: ease;
 }
 
-.about h3 {
-  float: left;
-  margin: 25px;
-  width: 69%;
-  font-size: 400%;
-  font-weight: 200;
-  color: gray;
-  line-height: 1em;
-  font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
-}
-
 h2.blog-title, h2.blog-title a {
   text-align: center;
   font-weight: 200;
@@ -127,6 +168,15 @@ div.blog-content, .about-p {
 code {
   font-family: FreeMono, monospace;
   color: #555;
+}
+
+blockquote {
+  background-color: #eee;
+  border-left: 5px solid #ccc;
+  padding: 5px 20px;
+  font-style: italic;
+  font-size: 1.25em;
+  color: gray
 }
 
 @keyframes App-logo-spin {
