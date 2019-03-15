@@ -50,6 +50,24 @@ export const updateBlog = (data) => {
         date: date(data.name),
         content: content(window.atob(data.content))
     }
-    console.log(blog)
     return { type: "UPDATE_BLOG", blog: blog }
+}
+
+export const fetchProjects = () => {
+    console.log("hit action")
+    // return dispatch => {
+    //     return fetch(API_URL + TOKEN)
+    //     .then(response => response.json())
+    //     .then(blogs => dispatch(updateBlogs(blogs)))
+    //     .catch(error => console.log(error));
+    // }
+}
+
+export const updateAnimation = (t) => {
+    return { type: "UPDATE_ANIMATION", title: t, animation: "featured"}
+}
+
+
+export const updateProjects = (projects) => {
+    return { type: "UPDATE_PROJECTS", projects: projects }
 }
