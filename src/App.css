@@ -27,13 +27,6 @@
     font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
   }
 
-  .project div.overlay {
-    color: rgb(59, 42, 59);
-    font-size: .75em;;
-    font-weight: 200;
-    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
-  }
-
 }
 
 @media screen and (min-width: 600px) {
@@ -55,23 +48,8 @@
     line-height: 2em;
     font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
   }
-
-  .project div.overlay {
-    width: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    opacity: 0;
-    background: rgb(39, 32, 39);
-    z-index: 1;
-    color: white;
-    font-size: .5em;;
-    font-weight: 200;
-    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
-  }
   
-  .project div.overlay:hover, h2.blog-title a:hover {
+  h2.blog-title a:hover {
     line-height: 1em;
     font-size: 1.25em;;
     font-weight: 100;
@@ -127,23 +105,76 @@ a:link {
   color: rgb(59, 143, 169);
 }
 
-.projects {
+div.carousel-projects {
   width: 100%;
 }
 
-.project {
+.carousel-projects .project {
   padding: 10px;
-  width: 80%;
-  height: 30%;
-  border: #ccc solid 2px;
+  width: 200px;
   display: inline-block;
-  margin: 5%;
+  margin: 10px 0px;
   position: relative;
   text-align: center;
 }
 
-.project img {
+.carousel-projects img {
   width: 100%;
+  filter: grayscale(100%);
+  z-index: 0;
+}
+
+
+.carousel-projects img:hover, .carousel-projects img.featured {
+  width: 100%;
+  opacity: .25;
+  z-index: 0;
+}
+
+/* @keyframes Proj-Feature {
+  from {
+    position: relative;
+    top: -135.5px;
+    width: 200px;
+    margin: auto;
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    width: 80%;
+    margin: auto;
+    opacity: 1;
+    animation-iteration-count: 5;
+    transition-delay: 3s;
+    transition-duration: 3s;
+    transition-timing-function: ease;
+    z-index: -1;
+  }
+} */
+
+.featured-projects img {
+  position: relative;
+  top: -135.5px;
+  width: 200px;
+  margin: auto;
+  opacity: 0;
+  z-index: -1;
+}
+
+.featured-projects img.playing {
+  zoom: 100%;
+  position: relative;
+  top: 0px;
+  width: 80%;
+  margin: auto;
+  opacity: 1;
+  animation-iteration-count: 5;
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: ease;
+  z-index: -1;
 }
 
 p.blog-date {
@@ -179,13 +210,5 @@ blockquote {
   color: gray
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
