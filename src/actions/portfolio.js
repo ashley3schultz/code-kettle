@@ -63,11 +63,18 @@ export const fetchProjects = () => {
     // }
 }
 
-export const updateAnimation = (t) => {
-    return { type: "UPDATE_ANIMATION", title: t, animation: "featured"}
+export const updateStatus = (title) => {
+    return { type: "UPDATE_STATUS", title: title, status: "featured" }
 }
-
 
 export const updateProjects = (projects) => {
     return { type: "UPDATE_PROJECTS", projects: projects }
+}
+
+export const updateProject = (project) => {
+    return { type: "UPDATE_PROJECT", project: project }
+}
+
+export const updateAnimation = (animation) => {
+    return { type: "UPDATE_ANIMATION", animation: animation }
 }
