@@ -3,14 +3,14 @@ import React from 'react';
 const ProjectsList = props => {
     return (
         <div className="carousel-projects">
-            {props.projects.map(proj => {
+            {props.projects.map(project => {
                 return (
-                    <div key={proj.title} className="project">
+                    <div key={project.title} className="project">
                         <img 
-                            className={proj.animation}
-                            href={proj.url} 
-                            src={require(`./images/${proj.title}.PNG`)} 
-                            alt={proj.title}
+                            className={project.status}
+                            href={project.url} 
+                            src={require(`./images/${project.title}.PNG`)} 
+                            alt={project.title}
                             onMouseOver={props.handleProjectHover}
                         />
                     </div>
