@@ -1,22 +1,19 @@
 import React from 'react';
 
 const Project = props => {
+    const project = props.project
     return (
         <div className='featured-projects'>
-            {props.project.map(proj => {
-                return (
-                    <div key={proj.title} className="project">
-                        <img 
-                            className={props.animation}
-                            href={proj.url} 
-                            src={require(`./images/${proj.title}.PNG`)} 
-                            alt={proj.title}
-                        />
-                        <h2 className={proj.animation}>{proj.title}</h2>
-                        <p className={proj.animation}>{proj.info}</p>
-                    </div>
-                )
-            })}     
+            <div key={project.title} className="project">
+                <img 
+                    className={props.animation}
+                    href={project.url} 
+                    src={require(`./images/${project.title}.PNG`)} 
+                    alt={project.title}
+                />
+                <h2 className={project.animation}>{project.title}</h2>
+                <p className={project.animation}>{project.info}</p>
+            </div>
         </div>
     )
 }
