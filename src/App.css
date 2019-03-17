@@ -105,10 +105,6 @@ a:link {
   color: rgb(59, 143, 169);
 }
 
-div.carousel-projects {
-  width: 100%;
-}
-
 .carousel-projects .project {
   padding: 10px;
   width: 200px;
@@ -126,55 +122,23 @@ div.carousel-projects {
 
 
 .carousel-projects img:hover, .carousel-projects img.featured {
-  width: 100%;
-  opacity: .25;
-  z-index: 0;
+  opacity: 0;
 }
-
-/* @keyframes Proj-Feature {
-  from {
-    position: relative;
-    top: -135.5px;
-    width: 200px;
-    margin: auto;
-    opacity: 0;
-    z-index: -1;
-  }
-  to {
-    position: relative;
-    top: 0px;
-    width: 80%;
-    margin: auto;
-    opacity: 1;
-    animation-iteration-count: 5;
-    transition-delay: 3s;
-    transition-duration: 3s;
-    transition-timing-function: ease;
-    z-index: -1;
-  }
-} */
 
 .featured-projects img {
   position: relative;
   top: -135.5px;
   width: 200px;
   margin: auto;
-  opacity: 0;
   z-index: -1;
 }
 
 .featured-projects img.playing {
-  zoom: 100%;
   position: relative;
   top: 0px;
   width: 80%;
-  margin: auto;
-  opacity: 1;
-  animation-iteration-count: 5;
-  transition-property: all;
   transition-duration: 3s;
   transition-timing-function: ease;
-  z-index: -1;
 }
 
 p.blog-date {
