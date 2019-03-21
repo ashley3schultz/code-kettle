@@ -11,8 +11,14 @@ const Project = props => {
                     src={require(`./images/${project.title}.PNG`)} 
                     alt={project.title}
                 />
-                <h2 className={project.animation}>{project.title}</h2>
-                <p className={project.animation}>{project.info}</p>
+                <div className="laptop"><img 
+                    className={props.animation}
+                    href={project.url} 
+                    src={require(`./images/Laptop.png`)} 
+                    alt="laptop"
+                /></div>
+                <h2 className={props.animation}>{project.title}</h2>
+                <p className={props.animation} id="anchor">{project.info}</p>
             </div>
         </div>
     )
