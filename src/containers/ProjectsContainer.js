@@ -25,6 +25,9 @@ class ProjectsContainer extends Component {
   delayAnimation = async () => {
     await delay(100);
     this.props.updateAnimation('playing')
+    await delay(100);
+    const el = document.getElementById('anchor')
+    el.scrollIntoView({block: 'start', behavior: 'smooth'})
   }
 
   handleProjectHover = (event) => {
