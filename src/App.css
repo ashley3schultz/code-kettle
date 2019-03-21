@@ -120,7 +120,6 @@ a:link {
   z-index: 0;
 }
 
-
 .carousel-projects img:hover, .carousel-projects img.featured {
   opacity: 0;
 }
@@ -129,16 +128,39 @@ a:link {
   position: relative;
   top: -135.5px;
   width: 200px;
-  margin: auto;
+  z-index: -1;
+}
+
+.featured-projects p, .featured-projects h2 {
+  opacity: 0;
+}
+
+.laptop img {
+  margin-top: -14%;
+  opacity: 0;
+  width: 275px;
   z-index: -1;
 }
 
 .featured-projects img.playing {
-  position: relative;
-  top: 0px;
-  width: 80%;
-  transition-duration: 3s;
-  transition-timing-function: ease;
+  position: static;
+  margin-top: 5%;
+  width: 73%;;
+  transition: width 1s ease;
+}
+
+.featured-projects p.playing, .featured-projects h2.playing {
+  opacity: 1;
+  transition: opacity 1.5s ease;
+  transition-delay: .5s;
+}
+
+.laptop img.playing {
+  margin-top: -46%;
+  width: 100%;
+  opacity: 1;
+  z-index: 0;
+  transition: margin, width 1s ease;
 }
 
 p.blog-date {
