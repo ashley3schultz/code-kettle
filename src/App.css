@@ -1,32 +1,27 @@
 @media screen and (min-width: 1000px) {
-  .App { 
+  div.App { 
     width: 1000px;
     margin: auto;
   }
-}
 
-@media screen and (max-width: 600px) {
+  div.featured-projects img {
+    width: 710px;
+    position: absolute;
+    top: 60%;
+    left: calc(calc(100vw - 710px) / 2);
+    z-index: -2;
+  }  
+
+  div.laptop img {
+    width: 980px;
+    position: absolute;
+    top: 54%;
+    margin: auto;
+    left: calc(calc(100vw - 980px) / 2);
+    opacity: 0;
+    z-index: 0;
+  }
   
-  .navbar a { 
-    font-size: .75em;
-    padding: 20px;
-    margin: 0px;
-  }
-
-  .about img {
-    width: 90%;
-    padding: 0px;
-    margin: 5% auto 0px;
-  }
-
-  h2.blog-title, h2.blog-title a {
-    text-align: center;
-    font-weight: 200;
-    color: gray;
-    line-height: 1em;
-    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
-  }
-
 }
 
 @media screen and (min-width: 600px) {
@@ -58,7 +53,52 @@
     transition-timing-function: ease;
   }
 
+  .featured-projects img {
+    width: 71%;
+    position: absolute;
+    top: calc(100vh - 40%);
+    left: 14.5%;
+    z-index: -2;
+  }
+  
+  .laptop img {
+    width: 98%;
+    position: absolute;
+    top: 440px;
+    margin: auto;
+    left: 1%;
+    opacity: 0;
+    z-index: 0;
+  }
+
 }
+
+@media screen and (max-width: 600px) {
+  
+  .navbar a { 
+    font-size: .75em;
+    padding: 20px;
+    margin: 0px;
+  }
+
+  .about img {
+    width: 90%;
+    padding: 0px;
+    margin: 5% auto 0px;
+  }
+
+  h2.blog-title, h2.blog-title a {
+    text-align: center;
+    font-weight: 200;
+    color: gray;
+    line-height: 1em;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+
+}
+
+
+
 
 .App {
   /* background-image: url('./components/images/CK.png'); */
@@ -148,13 +188,13 @@ a:link {
 
 /*  PROJECTS - FEATURED IMAGE   */
 
-.featured-projects img {
+/* .featured-projects img {
   width: 71%;
   position: absolute;
   top: 60%;
   left: 14.5%;
   z-index: -2;
-}
+} */
 
 .featured-projects img.playing {
   opacity: 1;
@@ -177,7 +217,7 @@ a:link {
 
 /*  PROJECTS - LAPTOP IMAGE   */
 
-.laptop img {
+/* .laptop img {
   width: 98%;
   position: absolute;
   top: 54%;
@@ -185,7 +225,7 @@ a:link {
   left: 1%;
   opacity: 0;
   z-index: 0;
-}
+} */
 
 .laptop img.playing {
   margin: auto;
@@ -209,6 +249,8 @@ a:link {
     transform: translateY(0) scale(1);
 	}
 }
+
+/*  BLOG  */ 
 
 p.blog-date {
   text-align: center;
