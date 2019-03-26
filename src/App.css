@@ -97,11 +97,7 @@
 
 }
 
-
-
-
 .App {
-  /* background-image: url('./components/images/CK.png'); */
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -204,7 +200,7 @@ a:link {
   z-index: 0;
 }
 
-@-webkit-keyframes projImage {
+@keyframes projImage {
 	0% {
     -webkit-transform: translateY(-76%) scale(.25);
     transform: translateY(-76%) scale(.25);
@@ -239,7 +235,7 @@ a:link {
   transition: 500ms ease .1s opacity;
 } 
 
-@-webkit-keyframes projLaptop {
+@keyframes projLaptop {
 	0% {
     -webkit-transform: translateY(-60%) scale(.25);
     transform: translateY(-60%) scale(.25);
