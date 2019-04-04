@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import ProjectsList from '../components/ProjectsList';
 import Project from '../components/Project';
 import { connect } from 'react-redux'
-import { updateProjects, updateStatus, updateProject, updateAnimation } from "../actions/portfolio";
-import { projects } from '../components/Data'
+import { fetchProjects, updateStatus, fetchProject, updateAnimation } from "../actions/portfolio";
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
 class ProjectsContainer extends Component {
 
   componentDidMount() {
-    this.props.updateProjects(projects)
+    this.props.fetchProjects()
   }
 
   componentDidUpdate(prevProps) {
@@ -34,9 +33,8 @@ class ProjectsContainer extends Component {
     const status = event.target.getAttribute('class')
     if (status === "standby"){
       const title = event.target.getAttribute('alt')
-      const project = this.props.projects.find(p => p.title === title)
       this.props.updateStatus(title)
-      this.props.updateProject(project)
+      this.props.fetchProject(title)
       this.props.updateAnimation('loaded')
     }
   }
@@ -67,4 +65,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {updateProjects, updateStatus, updateProject, updateAnimation})(ProjectsContainer)
+export default connect(mapStateToProps, {fetchProjects, updateStatus, fetchProject, updateAnimation})(ProjectsContainer)
