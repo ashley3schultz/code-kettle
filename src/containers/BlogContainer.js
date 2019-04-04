@@ -12,7 +12,7 @@ class BlogContainer extends Component {
 
   handleLinkClick = (event) => {
     const name = event.target.getAttribute('href').replace('/blog/', '')
-    this.props.fetchBlog(name + '.markdown')
+    this.props.fetchBlog(name)
   }
 
   render() {
