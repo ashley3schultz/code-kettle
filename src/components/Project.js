@@ -1,23 +1,24 @@
 import React from 'react';
 
 const Project = props => {
-    const project = props.project
+    const gh = 'https://raw.githubusercontent.com/ashley3schultz/ashley3schultz/'
+    const imgPath = `${gh}master/images/L-${props.project.title}.png`
     return (
         <div className='featured-projects'>
-            <div key={project.title} className="project">
+            <div key={props.project.title} className="project">
                 <img 
                     className={props.animation}
-                    href={project.url} 
-                    src={require(`./images/L-${project.title}.png`)} 
-                    alt={project.title}
+                    href={props.project.url} 
+                    src={imgPath} 
+                    alt={props.project.title}
                 />
                 <div className="laptop"><img 
                     className={props.animation}
-                    href={project.url} 
+                    href={props.project.url} 
                     src={require(`./images/Laptop.png`)} 
                     alt="laptop"
                 /></div>
-                <p className={props.animation} id="anchor">{project.info}</p>
+                <p className={props.animation} id="anchor">{props.project.info}</p>
             </div>
         </div>
     )
