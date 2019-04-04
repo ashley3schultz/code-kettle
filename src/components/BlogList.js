@@ -5,16 +5,16 @@ const BlogList = props => {
       return (
         <div className='bloglist'>
             {props.blogs.map(blog => 
-                <div key={blog.title} className="blog-preview">
-                    <h2 className="blog-title">
-                        <NavLink 
-                            onClick={props.handleLinkClick} 
-                            to={blog.path}>
-                            {blog.title}
-                        </NavLink>
-                    </h2>
-                    <p className="blog-date">{blog.date}</p>
+                <NavLink 
+                key={blog.title}
+                onClick={props.handleLinkClick} 
+                to={blog.path}
+                className="blog-preview">
+                <div href={blog.path} className="blog-preview">
+                    <h2 href={blog.path} className="blog-title">{blog.title}</h2>
+                    <p href={blog.path} className="blog-date">{blog.date}</p>
                 </div>
+                </NavLink>
             )}
         </div>
     )
