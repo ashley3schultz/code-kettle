@@ -1,7 +1,18 @@
 @media screen and (min-width: 1000px) {
+
   div.App { 
     width: 1000px;
     margin: auto;
+  }
+
+  .navbar a { 
+    padding: 50px;
+  }
+
+  div.about img {
+    border-radius: 0% 0% 0% 50%;
+    width: 25%;
+    float: right;
   }
 
   div.featured-projects img {
@@ -26,6 +37,37 @@
     -webkit-animation: 1.5s ease OpacAni;
     -moz-animation: 1.5s ease OpacAni;
     animation: 1.5s ease OpacAni;
+  }
+
+  div.blog-preview {
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(249, 245, 249);
+    margin: auto;
+    -webkit-transition: 250ms ease-in-out;
+    -moz-transitio:n 250ms ease-in-out;
+    transition: 250ms ease-in-out;
+  }
+
+  h2.blog-title {
+    text-align: center;
+    font-weight: 200;
+    color: gray;
+    padding-top: 15px;
+    font-family: "Lucida Sans Unicode", "Lucide Grande", "sans-serif";
+  }
+  
+  div.blog-preview:hover {
+    width: 85%;
+    height: 120px;
+    font-size: 1.25em;
+    font-weight: 100;
+    border-radius: 20px;
+    background-color: rgb(59, 42, 59);
+    -webkit-transition: 250ms ease-in-out;
+    -moz-transitio:n 250ms ease-in-out;
+    transition: 250ms ease-in-out;
   }
   
 }
