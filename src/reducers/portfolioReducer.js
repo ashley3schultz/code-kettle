@@ -1,5 +1,6 @@
 export default function portfolioReducer(
     state = {
+        about: "",
         blogs: [],
         blog: {},
         projects: [],
@@ -27,6 +28,9 @@ export default function portfolioReducer(
 
         case "UPDATE_PROJECT":
             return {...state, project: action.project }
+
+        case "UPDATE_ABOUT":
+            return {...state, about: action.about }
         
         case "UPDATE_ANIMATION":
             return {...state, animation: action.animation }

@@ -1,5 +1,6 @@
 const BLOG_URL = process.env.REACT_APP_BLOG_API
 const PROJ_URL = process.env.REACT_APP_PROJ_API
+const ABOUT_URL = process.env.REACT_APP_ABOUT_API
 const TOKEN = process.env.REACT_APP_TOKEN
 
 const title = (data) => (
@@ -93,6 +94,21 @@ export const updateProject = (data) => {
         status: "standby",
     }
     return { type: "UPDATE_PROJECT", project: project }
+}
+
+export const fetchAbout = () => {
+    console.log(ABOUT_URL)
+    return dispatch => {
+        return fetch(ABOUT_URL)
+        .then(response => response.json())
+        .then(about => dispatch(updateAbout(about)))
+        .catch(error => console.log(error));
+    }
+}
+
+export const updateAbout = (data) => {
+    const about = window.atob(data.content).replace(/(â)/gi,"'")
+    return { type: "UPDATE_ABOUT", about: about }
 }
 
 export const updateStatus = (title) => {

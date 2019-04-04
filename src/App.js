@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import About from './components/About';
+import AboutContainer from './containers/AboutContainer';
 import BlogContainer from './containers/BlogContainer';
 import ProjectsContainer from './containers/ProjectsContainer';
 import './App.css';
@@ -18,7 +18,7 @@ class App extends Component {
             <Navbar/>
             <Switch>
               <Route path="/" component={ProjectsContainer} exact/>
-              <Route path="/about" component={About}/>
+              <Route path="/about" component={AboutContainer}/>
               <Route path="/projects" component={ProjectsContainer}/>
               <Route path="/blog" component={BlogContainer}/>
             </Switch>
