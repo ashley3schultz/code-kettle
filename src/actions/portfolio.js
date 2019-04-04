@@ -1,4 +1,5 @@
-const API_URL = process.env.REACT_APP_BLOG_API
+const BLOG_URL = process.env.REACT_APP_BLOG_API
+const PROJ_URL = process.env.REACT_APP_PROJ_API
 const TOKEN = process.env.REACT_APP_TOKEN
 
 const title = (data) => (
@@ -15,7 +16,7 @@ const content = (data) => (
 
 export const fetchBlogs = () => {
     return dispatch => {
-        return fetch(API_URL + TOKEN)
+        return fetch(BLOG_URL + TOKEN)
         .then(response => response.json())
         .then(blogs => dispatch(updateBlogs(blogs)))
         .catch(error => console.log(error));
@@ -37,7 +38,7 @@ export const updateBlogs = (blogs) => {
 
 export const fetchBlog = (name) => {
     return dispatch => {
-        return fetch(API_URL + name + '.markdown')
+        return fetch(BLOG_URL + name + '.markdown')
         .then(response => response.json())
         .then(blog => dispatch(updateBlog(blog)))
         .catch(error => console.log(error));
@@ -54,25 +55,48 @@ export const updateBlog = (data) => {
 }
 
 export const fetchProjects = () => {
-    console.log("hit action")
-    // return dispatch => {
-    //     return fetch(API_URL + TOKEN)
-    //     .then(response => response.json())
-    //     .then(blogs => dispatch(updateBlogs(blogs)))
-    //     .catch(error => console.log(error));
-    // }
+    return dispatch => {
+        return fetch(PROJ_URL + TOKEN)
+        .then(response => response.json())
+        .then(projects => dispatch(updateProjects(projects)))
+        .catch(error => console.log(error));
+    }
+}
+
+export const updateProjects = (projects) => {
+    const list = []
+    projects.map((proj) => {
+        const item = {
+            title: proj.name.replace('.md',''),
+            url: 'https://' + proj.name.replace('.md','').toLowerCase() + '.herokuapp.com/',
+            status: "standby",
+        }
+        return (list.push(item))
+    })
+    return { type: "UPDATE_PROJECTS", projects: list }
+}
+
+export const fetchProject = (name) => {
+    return dispatch => {
+        return fetch(PROJ_URL + name + '.md')
+        .then(response => response.json())
+        .then(project => dispatch(updateProject(project)))
+        .catch(error => console.log(error));
+    }
+}
+
+export const updateProject = (data) => {
+    const project = {
+        title: data.name.replace('.md',''),
+        url: 'https://' + data.name.replace('.md','').toLowerCase() + '.herokuapp.com/',
+        info: window.atob(data.content),
+        status: "standby",
+    }
+    return { type: "UPDATE_PROJECT", project: project }
 }
 
 export const updateStatus = (title) => {
     return { type: "UPDATE_STATUS", title: title, status: "featured" }
-}
-
-export const updateProjects = (projects) => {
-    return { type: "UPDATE_PROJECTS", projects: projects }
-}
-
-export const updateProject = (project) => {
-    return { type: "UPDATE_PROJECT", project: project }
 }
 
 export const updateAnimation = (animation) => {
