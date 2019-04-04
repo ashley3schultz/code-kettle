@@ -37,7 +37,7 @@ export const updateBlogs = (blogs) => {
 
 export const fetchBlog = (name) => {
     return dispatch => {
-        return fetch(API_URL + name)
+        return fetch(API_URL + name + '.markdown')
         .then(response => response.json())
         .then(blog => dispatch(updateBlog(blog)))
         .catch(error => console.log(error));
