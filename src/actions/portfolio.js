@@ -98,7 +98,6 @@ export const updateProject = (data) => {
 }
 
 export const fetchAbout = () => {
-    console.log(ABOUT_URL)
     return dispatch => {
         return fetch(ABOUT_URL)
         .then(response => response.json())
