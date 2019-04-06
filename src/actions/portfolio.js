@@ -1,7 +1,8 @@
-const BLOG_URL = process.env.REACT_APP_BLOG_API
-const PROJ_URL = process.env.REACT_APP_PROJ_API
-const ABOUT_URL = process.env.REACT_APP_ABOUT_API
-const TOKEN = process.env.REACT_APP_TOKEN
+const UN = "ashley3schultz"
+const GH = `https://api.github.com/repos/${UN}/${UN}`
+const BLOG_URL = `${GH}.github.io/contents/_posts/`
+const PROJ_URL = `${GH}/contents/projects/`
+const ABOUT_URL = `${GH}/contents/about.md`
 
 const title = (data) => (
     data.substr(11).replace(/(.markdown)|_/gi," ").replace(/^(.)|\s(.)/gi, ($1) => $1.toUpperCase())
@@ -17,7 +18,7 @@ const content = (data) => (
 
 export const fetchBlogs = () => {
     return dispatch => {
-        return fetch(BLOG_URL + TOKEN)
+        return fetch(BLOG_URL)
         .then(response => response.json())
         .then(blogs => dispatch(updateBlogs(blogs)))
         .catch(error => console.log(error));
@@ -57,7 +58,7 @@ export const updateBlog = (data) => {
 
 export const fetchProjects = () => {
     return dispatch => {
-        return fetch(PROJ_URL + TOKEN)
+        return fetch(PROJ_URL)
         .then(response => response.json())
         .then(projects => dispatch(updateProjects(projects)))
         .catch(error => console.log(error));
